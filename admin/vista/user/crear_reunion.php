@@ -1,47 +1,35 @@
-<?php
-session_start();
-if (!isset($_SESSION['isLogged']) || $_SESSION['isLogged'] === FALSE) {
-    header("Location: /SistemaDeGestion/public/vista/login.html");
-}
-?>
-
 <!DOCTYPE html>
 <html>
 
 <head>
     <meta charset="UTF-8">
+    <title>Crear Reunion</title>
 </head>
 
 <body>
     <form id="formulario01" method="POST" action="../controladores/crear_usuario.php">
-        <label for="cedula">Cedula (*)</label>
-        <input type="text" id="cedula" name="cedula" value="" placeholder="Ingrese el número de cedula ..." required />
+        <label for="fecha">Fecha de Reunion (*)</label> 
+        <input type="date" id="fecha" name="fecha" value="" placeholder="Ingrese su fecha de la reunion ..." required />
         <br>
-        <label for="nombres">Nombres (*)</label>
-        <input type="text" id="nombres" name="nombres" value="" placeholder="Ingrese sus dos nombres ..." required />
+        <label for="hora">Hora (*)</label>
+        <input type="text" id="hora" name="hora" value="" placeholder="Ingrese la hora de la reunion ..." required />
         <br>
-        <label for="apellidos">Apelidos (*)</label>
-        <input type="text" id="apellidos" name="apellidos" value="" placeholder="Ingrese sus dos apellidos ..." required />
+        <label for="lugar">Lugar  (*)</label>
+        <input type="text" id="lugar" name="lugar" value="" placeholder="Ingrese el lugar de la reunion ..." required />
         <br>
-        <label for="direccion">Dirección (*)</label>
-        <input type="text" id="direccion" name="direccion" value="" placeholder="Ingrese su dirección ..." required />
+        <label for="coordenadas">Coordenadas (*)</label>
+        <input type="text" id="cordenadas" name="coordenadas" value="" placeholder="Ingrese las coordenadas ..." required />
         <br>
-        <label for="telefono">Teléfono (*)</label> 
-        <input type="text" id="telefono" name="telefono" value="" placeholder="Ingrese su número telefónico ..." required /> 
+        <label for="remitente">Remitente (*)</label> 
+        <input type="text" id="remitente" name="remitente" value="" placeholder="Ingrese el remitente ..." required /> 
         <br> 
-        <label for="fecha">Fecha Nacimiento (*)</label> 
-        <input type="date" id="fechaNacimiento" name="fechaNacimiento" value="" placeholder="Ingrese su fecha de nacimiento ..." required /> 
+        <label for="motivo">Motivo (*)</label> 
+        <input type="text" id="motivo" name="motivo" value="" placeholder="Ingrese motivo de la reunion ..." required /> 
         <br> 
-        <label for="correo">Correo electrónico (*)</label> 
-        <input type="email" id="correo" name="correo" value="" placeholder="Ingrese su correo electrónico ..." required /> 
+        <label for="observaciones">Observaciones (*)</label> 
+        <input type="text" id="observaciones" name="observaciones" value="" placeholder="Ingrese las observaciones ..." required /> 
         <br> 
-        <label for="rol">Rol de Usuario (*)</label> 
-        <input type="text" id="rol" name="rol" value="" placeholder="Ingrese el rol de usuario ..." required /> 
-        <br> 
-        <label for="correo">Contraseña (*)</label>
-        <input type="password" id="contrasena" name="contrasena" value="" placeholder="Ingrese su contraseña ..." required /> 
-        <br> 
-        <input type="submit" id="crear" name="crear" value="Aceptar" /> 
+        <input type="submit" id="crear" name="crear" value="Crear Reunion" /> 
         <input type="reset" id="cancelar" name="cancelar" value="Cancelar" /> 
     </form>
 </body>
