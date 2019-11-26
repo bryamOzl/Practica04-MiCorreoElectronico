@@ -7,7 +7,7 @@
 </head>
 
 <body>
-    <form id="formulario01" method="POST" action="../controladores/crear_usuario.php">
+    <form id="formulario01" method="POST" action="../../controladores/user/crear_reunion.php">
         <label for="fecha">Fecha de Reunion (*)</label> 
         <input type="date" id="fecha" name="fecha" value="" placeholder="Ingrese su fecha de la reunion ..." required />
         <br>
